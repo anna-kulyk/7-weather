@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <title>Open Weather API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Open Weather API</p>
+        </div>
+        <div class="main">
+        </div>
+        <div class="footer">
+            <button class="metric">&#x2103</button>
+            <button class="imperial inactive">&#8457</button>
+        </div>
+    </div>
+
+    <template id="weatherTemplate">
+        <div class="section">
+            <div class="weather-info">
+                <div class="city">{{location.name}}</div>
+                <div class="temp">{{temp}}{{tempUnit}}</div>
+                <div class="icon">
+                    <img src="{{iconSrc}}" alt="{{weatherDescription}}" title="{{weatherDescription}}">
+                    <details class="forecast-details">
+                        <summary class="right">
+                            <i class="fas fa-chevron-right"> </i>
+                        </summary>
+                        <div class="forecast fade-in"></div>
+                    </details>
+                </div>
+            </div>
+            <details class="weather-info-details">
+                <summary class="down">
+                    <i class="fas fa-chevron-down"></i>
+                </summary>
+                <div class="weather-details content">
+                    <div>
+                        <p>Wind Speed</p>
+                        <p>{{windSpeed}} {{windUnit}}</p>
+                    </div>
+                    <div>
+                        <p>W.Direction</p>
+                        <p><i class="fas fa-long-arrow-alt-up"></i></p>
+                    </div>
+                    <div>
+                        <p>Pressure</p>
+                        <p>{{pressure}} {{pressureUnit}}</p>
+                    </div>
+                    <div>
+                        <p>Sunrise</p>
+                        <p>{{sunrise}}</p>
+                    </div>
+                    <div>
+                        <p>Sunset</p>
+                        <p>{{sunset}}</p>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </template>
+    
+
+    <script src="https://kit.fontawesome.com/e0cdb8c08f.js" crossorigin="anonymous"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/locationData.js"></script>
+    <script src="js/weatherData.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
