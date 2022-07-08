@@ -77,7 +77,7 @@ function renderWeather(locationIds, units, template) {
             }
         }
 
-        //forcast details fade in and out animation
+        //forecast details fade in and out animation
         const detailsAll = document.querySelectorAll(".forecast-details");
         for (const details of detailsAll) {
             details.addEventListener("click", function(e) {
