@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <p>Open Weather API</p>
+            <p>Weather App</p>
         </div>
         <div class="main">
         </div>
@@ -31,7 +31,7 @@
                         <summary class="right">
                             <i class="fas fa-chevron-right"> </i>
                         </summary>
-                        <div class="forecast fade-in"></div>
+                        <div class="forecast fade-in" id="{{location.id}}"></div>
                     </details>
                 </div>
             </div>
@@ -70,6 +70,8 @@
     <script src="js/mustache.min.js"></script>
     <script src="js/locationData.js"></script>
     <script src="js/weatherData.js"></script>
+    <script src="js/currentWeatherData.js"></script>
+    <script src="js/forecastWeatherData.js"></script>
     <script src="js/script.js"></script>
 
 </body>

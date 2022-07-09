@@ -94,7 +94,7 @@ details summary::-webkit-details-marker {
     top: 15px;
     left: 18px;
     height: fit-content;
-    width: 300px;
+    width: 400px;
     border: 1px solid white;
     display: flex;
     flex-direction: row;
@@ -103,9 +103,15 @@ details summary::-webkit-details-marker {
 }
 
 .forecast--section {
-    width: 20%;
+    width: 12.5%;
     outline: 1px solid white;
     padding: 5px 0px;
+}
+
+.forecast--section>p:first-child {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;;
 }
 
 .weather-details {
